@@ -1,0 +1,127 @@
+body{
+    margin: auto;
+    background-color: hsl(0, 0%, 98%);
+    
+}
+:root{
+    --font:Verdana, Geneva, Tahoma, sans-serif;
+    --cardWidth:7cm;
+    --cardHeight:5cm;
+    --cardRadius:7px
+}
+.top_header{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.top_header>p{
+    color:black;
+    font-size: 30px;
+    text-align: justify;
+    font-family:var(--font);
+    margin-bottom: 3vh;
+    margin-top: 0;
+}
+.top_header>p::first-line{
+    opacity: .5;
+}
+.top_header p:last-of-type{
+    width: 30%;
+    flex: 3;
+    opacity: .5;
+    font-size: 15px;
+    font-family: var(--font);
+    text-align: center;
+}
+.cards{
+    display: grid;
+    position: relative;
+    margin-top: 5%;
+    grid-template-rows:  auto;
+    grid-template-columns: auto var(--cardWidth) auto;
+    grid-template-areas: 
+    ". builder ."
+    "supervisor karma calculator"
+   ;
+    gap: 50px 50px;
+}
+.cards div>img{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+.cards div {
+    padding: 20px;
+    position: relative;
+    width: var(--cardWidth);
+    height:  var(--cardHeight);
+    background-color: white;
+    border-top-style: solid;
+    border-radius: var(--cardRadius);
+    font-family: var(--font);
+    box-shadow:var(--cardRadius) var(--cardRadius) hsl(234, 12%, 34%);
+   
+}
+.cards div p {
+   opacity: .5;
+
+}
+.cards div p::first-line{
+    font-size: large;
+    font-weight: bolder;
+    opacity: 1.5;
+    font-family: var(--font);
+}
+
+.supervisor{
+    grid-area: supervisor;
+    border-top-color: hsl(180, 62%, 55%);
+    justify-self: right;
+    top: -50%;
+}
+.builder{
+    grid-area: builder;
+   border-top-color: hsl(0, 78%, 62%);
+    justify-self: center;
+}
+
+.calculator{
+    grid-area: calculator;
+   border-top-color:  hsl(212, 86%, 64%);
+   top: -50%;
+}
+.karma{
+    grid-area:karma;
+   border-top-color:hsl(34, 97%, 64%)  ;
+    justify-self: center;
+}
+@media screen and (max-width: 375px){
+    .cards{
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "builder"
+        "supervisor"
+        "karma" 
+        "calculator";
+        gap: 50px 0;
+    }
+    .cards div{
+        justify-self: center;
+        box-shadow: none;
+    }
+    .calculator{
+      top: unset;
+    }
+    .supervisor{
+        top:unset
+    }
+    .top_header>p{
+        font-size: 20px;
+    }
+}
+   
+
