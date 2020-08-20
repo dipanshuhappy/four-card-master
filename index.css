@@ -112,6 +112,8 @@ body{
     .cards div{
         justify-self: center;
         box-shadow: none;
+
+       border-radius: 15px;
     }
     .calculator{
       top: unset;
