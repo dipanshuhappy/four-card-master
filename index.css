@@ -107,7 +107,7 @@ body{
         "supervisor"
         "karma" 
         "calculator";
-        gap: 50px 0;
+        gap: 0 0;
     }
     .cards div{
         justify-self: center;
