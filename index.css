@@ -98,7 +98,7 @@ body{
    border-top-color:hsl(34, 97%, 64%)  ;
     justify-self: center;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
     .cards{
         grid-template-columns: auto;
         grid-template-rows: auto;
