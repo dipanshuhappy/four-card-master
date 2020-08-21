@@ -100,8 +100,8 @@ body{
 }
 @media screen and (max-width: 500px){
     .cards{
-        grid-template-columns: auto;
-        grid-template-rows: 4;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "builder"
         "supervisor"
