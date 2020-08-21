@@ -100,7 +100,7 @@ body{
 }
 @media screen and (max-width: 500px){
     .cards{
-        grid-template-columns: 1;
+        grid-template-columns: auto;
         grid-template-rows: 4;
         grid-template-areas:
         "builder"
